@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Function Plotter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadratic Function Plotter</h1>
+
+    <label for="a">Enter the coefficient 'a': </label>
+    <input class="kotakinput" type="number" id="a" value="1">
+
+    <label for="b">Enter the coefficient 'b': </label>
+    <input class="kotakinput" type="number" id="b" value="0">
+
+    <label for="c">Enter the coefficient 'c': </label>
+    <input class="kotakinput" type="number" id="c" value="0">
+
+    <canvas id="cartesianCanvas" width="500" height="500"></canvas>
+
+    <script>
+        function drawQuadraticFunction(a, b, c) {
+            var canvas = document.getElementById('cartesianCanvas');
+            var context = canvas.getContext('2d');
+            
+            // Clear the canvas
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw X and Y axes
+            context.beginPath();
+            context.moveTo(0, canvas.height / 2);
+            context.lineTo(canvas.width, canvas.height / 2);
+            context.moveTo(canvas.width / 2, 0);
+            context.lineTo(canvas.width / 2, canvas.height);
+            context.strokeStyle = "#000";
+            context.stroke();
+
+            // Draw the quadratic function
+            context.beginPath();
+            for (var x = -10; x <= 10; x += 0.1) {
+                var y = a * x * x + b * x + c;
+                var pixelX = canvas.width / 2 + x * 20;
+                var pixelY = canvas.height / 2 - y * 20;
+
+                // Draw points
+                context.lineTo(pixelX, pixelY);
+            }
+            context.strokeStyle = "blue";
+            context.stroke();
+        }
+
+        // Call the draw function when the page loads
+        window.onload = function () {
+            var aInput = document.getElementById('a');
+            var bInput = document.getElementById('b');
+            var cInput = document.getElementById('c');
+
+            // Redraw when input values change
+            aInput.addEventListener('input', draw);
+            bInput.addEventListener('input', draw);
+            cInput.addEventListener('input', draw);
+
+            // Initial draw
+            draw();
+
+            function draw() {
+                var a = parseFloat(aInput.value);
+                var b = parseFloat(bInput.value);
+                var c = parseFloat(cInput.value);
+
+                drawQuadraticFunction(a, b, c);
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fungsi Kuadrat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1 class="logo">KH</h1>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kelas.html">Kelas</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kelas.html">Kelas</a></li>
+        <li><a href="about.html">About</a></li>
+      </div>
+    </header>
+
+    <main>
+      <section class="materi">
+        <div class="kotak-materi">
+          <div class="isi-materi">
+            <h1>Fungsi Kuadrat</h1>
+            <p>Fungsi kuadrat adalah fungsi polinomial yang memiliki variabel
+            dengan pangkat tertinggi dua. Fungsi kuadrat disusun oleh persamaan
+            kuadrat berbentuk umum f(x) = ax<sup>2</sup> + bx + c, dengan a ≠ 0.
+            </p>
+
+            <div> </div>
+            <h3>Ciri-ciri dari fungsi kuadrat :</h3>
+            <li>
+            Bentuk umumnya yaitu f(x)=ax<sup>2</sup>+bc+c dengan nilai a tidak
+            boleh sama dengan nol.
+            </li>
+            <li>
+            Fungsi kuadrat paling sederhana adalah y=x<sup>2</sup> dengan
+            derajat tertinggi adalah 2.
+            </li>
+            <li>
+              Apabila diplotkan dalam sistem koordinasi kartesian, maka bentuk
+              grafiknya yakni parabola. Bentuknya bisa beragam, mulai dari
+              landai hingga curam. Akan tetapi, bentuk dasarnya adalah U yang
+              dapat membuka ke atas atau ke bawah tergantung nilai a.
+            </li>
+            <li>Mempunya titik balik minimum ataupun maksimum</li>
+            <li>Terdapat sumbu simetri yang memotong parabola secara vertikal
+                menjadi dua bagian.
+            </li>
+
+            <div></div>
+
+            <h3>Rumus Fungsi Kuadrat</h3>
+            <p>f(x)=ax<sup>2</sup>+bx+c</p>
+              
+            <li>f(x)adalah fungsi kuadrat.</li>
+            <li>a serta b adalah koefisien.</li>
+            <li>c adalah konstanta.</li>
+            <li>x yakni sebagai variable.</li>
+            <li>a tidak sama dengan 0</li>
+        
+            <div> </div>
+
+            <h3> Grafik Fungsi Kuadrat</h3>
+            <p>grafik fungsi kuadrat ialah suatu grafik yang berguna untuk menguraikan gambaran dari fungsi kuadrat.</p>
+            <p><strong>Ciri-ciri grafik fungsi kuadrat :</strong></p>
+          
+            <li>Memiliki grafik yang simetris.</li>
+            <li>Bentuknya identik seperti parabola.</li>
+            <li>Hanya memiliki titik minimum saja atau titik maksimum saja, tidak keduanya.</li>
+            <li>Adanya f(x)=y yang merupakan variabel terikat. Sementara itu, variabel bebasnya adalah x , dan a serta b adalah koefisien yang variabel dengan pangkat paling tinggi yakni dua serta berbentuk persamaan.</li>
+              
+            </h2>
+
+            <div> </div>
+
+            <p>Ada beberapa sifat grafik fungsi kuadrat yaitu sebagai berikut :</p>
+            <p></p>
+            <h3>1. Grafik Terbuka</h3>
+            <p>Sifat yang satu ini grafiknya ditentukan oleh nilai f yang berfungsi untuk menentukan hasil ke arah
+               bawah ataupun ke arah atas. Apabila a>0, maka grafiknya akan menampakkan atas.</p>
+            <p></p>
+            <p>Sementara itu, apabila nilai a < 0, maka hasil grafiknya negatif atau ke bawah.</p>
+            <img src="grafikfungsikuadrat.png" class="grafik-fungsiKuadrat" />
+
+            <p></p>
+            <h3>2. Titik Puncak</h3>
+            <p>Sifat ini dapat kamu lihat ketika grafik memperlihatkan hasil ke bawah. Jadi, titik puncaknya berada pada titik maksimum. Kemudian, apabila grafik mengarah ke atas 
+              serta terbuka, maka minimum adalah titik puncaknya.</p>
+            
+            <p></p>
+            <p></p>
+
+            <h1>Implementasi Rumus dan Grafik Fungsi Kuadrat</h1>
+
+            <p>Grafik di bawah akan berubah mengikuti nilai koefisien yang ada pada rumus :
+            </p>
+            <h3><p>f(x)=ax<sup>2</sup>+bx+c</p></h3>
+            <p>Ubahlah koefisien a, b, dan c, maka grafik akan membentuk sesuai dengan fungsi tersebut</p>
+
+            <label for="a">Masukkan koefisien 'a': </label>
+            <input class="kotakinput" type="number" id="a" value="1">
+
+            <label for="b">Masukkan koefisien 'b': </label>
+            <input class="kotakinput" type="number" id="b" value="0">
+
+            <label for="c">Masukkan koefisien 'c': </label>
+            <input class="kotakinput" type="number" id="c" value="0">
+
+            <p></p>
+            <canvas id="cartesianCanvas" width="500" height="500"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle-btn");
+      const toggleBtnIcon = document.querySelector(".toggle-btn i");
+      const dropDownMenu = document.querySelector(".dropdown-menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+
+      function drawQuadraticFunction(a, b, c) {
+        var canvas = document.getElementById('cartesianCanvas');
+        var context = canvas.getContext('2d');
+        
+        // Clear the canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw X and Y axes
+        context.beginPath();
+        context.moveTo(0, canvas.height / 2);
+        context.lineTo(canvas.width, canvas.height / 2);
+        context.moveTo(canvas.width / 2, 0);
+        context.lineTo(canvas.width / 2, canvas.height);
+        context.strokeStyle = "#000";
+        context.stroke();
+
+        // Draw the quadratic function
+        context.beginPath();
+        for (var x = -10; x <= 10; x += 0.1) {
+            var y = a * x * x + b * x + c;
+            // Adjusted scaling factor for a smaller canvas
+            var pixelX = canvas.width / 2 + x * 10;
+            var pixelY = canvas.height / 2 - y * 10;
+
+            // Draw points
+            context.lineTo(pixelX, pixelY);
+        }
+        context.strokeStyle = "blue";
+        context.stroke();
+    }
+
+    // Call the draw function when the page loads
+    window.onload = function () {
+        var aInput = document.getElementById('a');
+        var bInput = document.getElementById('b');
+        var cInput = document.getElementById('c');
+
+        // Redraw when input values change
+        aInput.addEventListener('input', draw);
+        bInput.addEventListener('input', draw);
+        cInput.addEventListener('input', draw);
+
+        // Initial draw
+        draw();
+
+        function draw() {
+            var a = parseFloat(aInput.value);
+            var b = parseFloat(bInput.value);
+            var c = parseFloat(cInput.value);
+
+            drawQuadraticFunction(a, b, c);
+        }
+    };
+    </script>
+  </body>
+</html>

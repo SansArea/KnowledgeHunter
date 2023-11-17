@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOWLEDGE HUNTER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">KH</h1>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kelas.html">Kelas</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown-menu ">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="kelas.html">Kelas</a></li>
+            <li><a href="about.html">About</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section class="konten-about">
+            <div class="kotak-about"> 
+                <div class="isi-about">
+                    <h1>Apa itu Knowledge Hunter?</h1>
+                    <p>Knowledge Hunter merupakan sebuah web yang bergerak di bidang ilmu pengetahuan dengan skala yang luas.
+                        Knowledge Hunter membahas mengenai ilmu akademis dan juga hal-hal umum yang ada di lingkungan sekitar.
+                        sesuai dengan namanya, Knowledge Hunter yang berarti pemburu pengetahuan, dan yang namanya pengetahuan
+                        tidak harus yang berkaitan dengan pendidikan sekolah atau universitas, tetapi banyak hal lain diluar
+                        sana yang layak untuk kita sebut sebagai pengetahuan.
+                    </p>
+
+                    <div> </div>
+
+                    <h1>Untuk apa Knowledge Hunter dibuat?</h1>
+                    <p>Pada dasarnya website ini dibuat untuk melengkapi nilai project UAS, mata kuliah Kalkulus
+                         semester 1, dan sebagai mahasiswa semester 1, pembuatan website ini juga berguna untuk mengasah kemampuan
+                          kami dalam pemahaman bahasa pemograman html, css, dan juga javascript.
+                    </p>
+
+                    <div> </div>
+
+                    <h1>Siapa pendiri Knowledge Hunter?</h1>
+                    <p>Knowledge Hunter didirikan oleh sebuah kelompok beranggotakan tiga orang, yaitu saya Muhammad Ihsan, kemudian
+                        dua lagi bernama Farid Firdaus dan Muhamad Rizki.
+                    </p>
+                </div>  
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
