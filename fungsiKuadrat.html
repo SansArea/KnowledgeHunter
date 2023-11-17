@@ -148,10 +148,7 @@
         var canvas = document.getElementById('cartesianCanvas');
         var context = canvas.getContext('2d');
         
-        // Clear the canvas
         context.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Draw X and Y axes
         context.beginPath();
         context.moveTo(0, canvas.height / 2);
         context.lineTo(canvas.width, canvas.height / 2);
@@ -160,11 +157,10 @@
         context.strokeStyle = "#000";
         context.stroke();
 
-        // Draw the quadratic function
+    
         context.beginPath();
         for (var x = -10; x <= 10; x += 0.1) {
             var y = a * x * x + b * x + c;
-            // Adjusted scaling factor for a smaller canvas
             var pixelX = canvas.width / 2 + x * 10;
             var pixelY = canvas.height / 2 - y * 10;
 
@@ -175,18 +171,15 @@
         context.stroke();
     }
 
-    // Call the draw function when the page loads
     window.onload = function () {
         var aInput = document.getElementById('a');
         var bInput = document.getElementById('b');
         var cInput = document.getElementById('c');
 
-        // Redraw when input values change
         aInput.addEventListener('input', draw);
         bInput.addEventListener('input', draw);
         cInput.addEventListener('input', draw);
 
-        // Initial draw
         draw();
 
         function draw() {
